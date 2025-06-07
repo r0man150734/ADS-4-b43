@@ -1,5 +1,5 @@
 // Copyright 2021 NNTU-CS
-int lower_bound(const int *arr, int left, int right, int target) {
+int lower_bound(int *arr, int left, int right, int target) {
     while (left < right) {
         int mid = left + (right - left) / 2;
         if (arr[mid] < target) {
@@ -10,7 +10,7 @@ int lower_bound(const int *arr, int left, int right, int target) {
     }
     return left;
 }
-int upper_bound(const int *arr, int left, int right, int target) {
+int upper_bound(int *arr, int left, int right, int target) {
     while (left < right) {
         int mid = left + (right - left) / 2;
         if (arr[mid] <= target) {
@@ -22,7 +22,7 @@ int upper_bound(const int *arr, int left, int right, int target) {
     return left;
 }
 
-int countPairs1(const int *arr, int len, int value) {
+int countPairs1(int *arr, int len, int value) {
     int count = 0;
     for (int i = 0; i < len; ++i) {
         for (int j = 0; j < len; ++j) {
@@ -34,7 +34,7 @@ int countPairs1(const int *arr, int len, int value) {
     return count / 2;
 }
 
-int countPairs2(const int *arr, int len, int value) {
+int countPairs2(int *arr, int len, int value) {
     int left = 0, right = len - 1;
     int count = 0;
 
@@ -72,7 +72,7 @@ int countPairs2(const int *arr, int len, int value) {
 }
 
 
-int countPairs3(const int *arr, int len, int value) {
+int countPairs3(int *arr, int len, int value) {
     int count = 0;
 
     for (int i = 0; i < len; ++i) {
